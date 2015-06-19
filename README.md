@@ -15,4 +15,4 @@ Experiment result log files are saved in `./4_parallel_srp-phat/exp_total/result
 
 ### Reference
 Taewoo Lee, Sukmoon Chang, and Dongsuk Yook, ["Parallel SRP-PHAT for GPUs,"](http://www.sciencedirect.com/science/article/pii/S0885230815000455)
- Computer Speech and Language, vol. 35, pp. 1-13, Jan. 2016
+ Computer Speech and Language, vol. 35, pp. 1-13, Jan. 2016.

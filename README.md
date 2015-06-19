@@ -11,7 +11,7 @@ On Windows and MATLAB, (the codes were tested on Windows7 64-bit and MATLAB2009b
 On Linux which is installed a CUDA, (the codes were tested on CUDA 7.0, GTX TITAN X, Ubuntu 14.04.02 64-bit).
  1. Execute `./4_parallel_srp-phat/run.sh` on a terminal. (Please make sure that the execution permissions of `*.sh` files are set correctly. If not, you may set the permission with `chmod 777 *.sh` command).
 
-Experiment result log files are saved in `./4_parallel_srp-phat/exp_total/result/log`. For more detail explanation, please refer to the paper below.
+Experiment result log files are saved in `./4_parallel_srp-phat/exp_total/result/log`. For more detailed explanation, please refer to the paper below.
 
 ### Reference
 Taewoo Lee, Sukmoon Chang, and Dongsuk Yook, ["Parallel SRP-PHAT for GPUs,"](http://www.sciencedirect.com/science/article/pii/S0885230815000455)

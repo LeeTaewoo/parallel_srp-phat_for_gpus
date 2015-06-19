@@ -1,5 +1,5 @@
 # Parallel SRP-PHAT for GPUs
-Simple Experiment on Simulated Data.
+Simple Demonstration on Simulated Data.
 ### Execution
 On Windows and MATLAB, (the codes were tested on Windows7 64-bit and MATLAB2009b).
  1. Download `LDC93S1.wav` file from [here](https://www.google.com/url?q=https%3A%2F%2Fcatalog.ldc.upenn.edu%2Fdesc%2Faddenda%2FLDC93S1.wav&sa=D&sntz=1&usg=AFQjCNE1QtQownD3lvimnRxuWBXkutWotg). Copy the file into `1_gen_simul_data` folder.

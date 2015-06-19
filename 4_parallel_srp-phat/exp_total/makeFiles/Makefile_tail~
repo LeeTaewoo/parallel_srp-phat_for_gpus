@@ -1,0 +1,27 @@
+NVCCFLAGS += $(COMMONFLAGS)
+CXXFLAGS += $(COMMONFLAGS) -I/usr/include -lm
+CFLAGS += $(COMMONFLAGS)
+LIB_CUDA := -L$(CUDA_INSTALL_PATH)/lib64 -lcudart -lcufft -lm
+
+# CUDA code generation flags
+SMS ?= 20 30 35 37 50 52
+HIGHEST_SM := $(lastword $(sort $(SMS)))
+ifneq ($(HIGHEST_SM),)
+GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
+endif
+NVCC_OPTS := $(GENCODE_FLAGS) -use_fast_math -O3 --compiler-options "-O3 --fast-math"
+GCC_OPTS := -O3 --fast-math
+
+OBJS = main.o
+TARGET= exp
+LINKLINE= $(LINK) $(LIB_CUDA) -o $(TARGET) $(OBJS) 
+
+.SUFFIXES: .cpp .cu .o
+
+$(TARGET): $(OBJS) Makefile
+	$(LINKLINE)
+main.o: main.cu main.h
+	$(NVCC) $(NVCCFLAGS) $(NVCC_OPTS) -c $<
+
+clean :
+	rm -f ${OBJS} ${TARGET}

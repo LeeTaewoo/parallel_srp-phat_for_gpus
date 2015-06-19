@@ -1,0 +1,15 @@
+// clustered_file_loader.h
+#ifndef _CLUSTERED_FILE_LOADER_H_
+#define _CLUSTERED_FILE_LOADER_H_
+#include "main.h"
+
+int load_clustered_file_TD(void);
+int load_clustered_file_FD(void); 
+
+extern int h_tdoa_table[Q*NCOMBMICS];
+extern char4 h_tdoa_table_char4[POWER_SIZE*(NCOMBMICS/4)];
+extern float h_SRP[Q];
+extern int h_sphCoords[Q*3];
+extern float h_TOA_table[Q*M];
+
+#endif

@@ -20,7 +20,7 @@ function []=frameExtracter(filelist,M,T)
 % 
 % You should have received a copy of the GNU General Public License
 % along with this program. If not, see <http://www.gnu.org/licenses/>.
-filelist= ld_vadlist();
+% filelist= ld_vadlist();
 nfile= size(filelist,1);
 
 disp('Extract VAD frames');
